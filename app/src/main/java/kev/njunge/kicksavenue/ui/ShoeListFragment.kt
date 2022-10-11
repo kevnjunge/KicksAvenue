@@ -17,14 +17,14 @@ class ShoeListFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        val view = inflater.inflate(R.layout.fragment_shoe_list,container,false)
+        val view = inflater.inflate(R.layout.fragment_shoe_list, container, false)
 
         setUpRecyclerView(view)
         return view
     }
 
-    private fun setUpRecyclerView(view: View?){
-        val context =  requireContext()
+    private fun setUpRecyclerView(view: View?) {
+        val context = requireContext()
 
         val sneakerAdapter = SneakerAdapter(context, SneakerImages.sneakerList!!)
 
@@ -37,5 +37,5 @@ class ShoeListFragment : Fragment() {
         recyclerView?.layoutManager = layoutManager
     }
 
-   
+
 }
